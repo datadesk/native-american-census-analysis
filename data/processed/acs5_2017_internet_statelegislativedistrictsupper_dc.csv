@@ -1,0 +1,9 @@
+geoid,name,total_households,total_with_computer,dialup_internet,broadband_internet,computer_no_internet,total_no_computer,state,state legislative district (upper chamber),total_with_internet,total_no_internet
+11001,"Ward 1 (2016), District of Columbia",35314.0,32012.0,71.0,29180.0,2761.0,3302.0,11,001,29251.0,6063.0
+11002,"Ward 2 (2016), District of Columbia",38126.0,36591.0,82.0,33816.0,2693.0,1535.0,11,002,33898.0,4228.0
+11003,"Ward 3 (2016), District of Columbia",38106.0,36681.0,124.0,35029.0,1528.0,1425.0,11,003,35153.0,2953.0
+11004,"Ward 4 (2016), District of Columbia",30754.0,26780.0,120.0,24282.0,2378.0,3974.0,11,004,24402.0,6352.0
+11005,"Ward 5 (2016), District of Columbia",33410.0,27696.0,182.0,23695.0,3819.0,5714.0,11,005,23877.0,9533.0
+11006,"Ward 6 (2016), District of Columbia",42218.0,38948.0,70.0,35139.0,3739.0,3270.0,11,006,35209.0,7009.0
+11007,"Ward 7 (2016), District of Columbia",30138.0,22949.0,167.0,15820.0,6962.0,7189.0,11,007,15987.0,14151.0
+11008,"Ward 8 (2016), District of Columbia",29919.0,23412.0,74.0,17070.0,6268.0,6507.0,11,008,17144.0,12775.0
