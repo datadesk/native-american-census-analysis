@@ -1,3 +1,4 @@
+import us
 import click
 import logging
 import census_data_downloader
@@ -15,10 +16,11 @@ def cli():
 def internet(force):
     runner = census_data_downloader.InternetDownloader(
        CENSUS_API_KEY,
-       data_dir="./data/",
+       data_dir="/media/palewire/Passport/htc",
        force=force
     )
-    runner.download_everything()
+    for state in us.STATES:
+        runner.download_tracts(state.abbr)
 
 
 def configure_logger():
