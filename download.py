@@ -10,6 +10,18 @@ def cli():
     pass
 
 
+@cli.command(help='Download race data')
+@click.option('--force', is_flag=True, help="Redownload raw data from the Census")
+def race(force):
+    runner = census_data_downloader.RaceDownloader(
+       CENSUS_API_KEY,
+       data_dir="/media/palewire/Passport/htc",
+       force=force
+    )
+    runner.download_counties()
+    for state in us.STATES:
+        runner.download_tracts(state.abbr)
+
 
 @cli.command(help='Download Internet service data')
 @click.option('--force', is_flag=True, help="Redownload raw data from the Census")
@@ -21,6 +33,20 @@ def internet(force):
     )
     for state in us.STATES:
         runner.download_tracts(state.abbr)
+    runner.download_counties()
+
+
+@cli.command(help='Download language data')
+@click.option('--force', is_flag=True, help="Redownload raw data from the Census")
+def language(force):
+    runner = census_data_downloader.LanguageDownloader(
+       CENSUS_API_KEY,
+       data_dir="/media/palewire/Passport/htc",
+       force=force
+    )
+    for state in us.STATES:
+        runner.download_tracts(state.abbr)
+    runner.download_counties()
 
 
 def configure_logger():
