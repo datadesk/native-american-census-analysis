@@ -1,3 +1,4 @@
 altair-*.json
 .ipynb_checkpoints
 *.pyc
+data/

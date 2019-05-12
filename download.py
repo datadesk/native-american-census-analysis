@@ -1,6 +1,7 @@
 import us
 import click
 import logging
+from tracts import USTractDownloader2010
 import census_data_downloader
 CENSUS_API_KEY = "2406531db87ec547327b463ef193df1afe91b80b"
 
@@ -8,6 +9,11 @@ CENSUS_API_KEY = "2406531db87ec547327b463ef193df1afe91b80b"
 @click.group(help="Download data about Native Americans")
 def cli():
     pass
+
+
+@cli.command(help="Download tract maps")
+def tracts():
+    USTractDownloader2010(data_dir="data/tiger/").run()
 
 
 @cli.command(help='Download race data')
@@ -53,7 +59,7 @@ def configure_logger():
     """
     Configures logging so it prints everything to the console.
     """
-    for l in ['census_data_downloader',]:
+    for l in ['census_data_downloader', "tracts"]:
         logger = logging.getLogger(l)
         logger.setLevel(logging.DEBUG)
         ch = logging.StreamHandler()
