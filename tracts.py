@@ -2,6 +2,7 @@
 Download Census tract shapefiles.
 """
 import us
+import time
 import pathlib
 import zipfile
 import logging
@@ -40,6 +41,7 @@ class BaseTractDownloader(object):
         # If it doesn't, download it from the Census FTP
         logger.debug(f"Downloading {self.url} to {zip_path}")
         urlretrieve(self.url, zip_path)
+        time.sleep(1)
 
         # Return the path
         return zip_path
