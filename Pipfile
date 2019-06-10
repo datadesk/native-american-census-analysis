@@ -10,6 +10,9 @@ click = "*"
 jupyterlab = "*"
 altair = "*"
 census-data-downloader = "==0.0.7"
+matplotlib = "*"
+descartes = "*"
+geoplot = "*"
 
 [requires]
 python_version = "3.6"
