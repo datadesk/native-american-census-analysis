@@ -6,13 +6,9 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-click = "*"
 jupyterlab = "*"
-altair = "*"
-census-data-downloader = "==0.0.7"
-matplotlib = "*"
-descartes = "*"
-geoplot = "*"
+pandas = "*"
+geopandas = "*"
 
 [requires]
 python_version = "3.6"
